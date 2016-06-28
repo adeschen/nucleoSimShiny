@@ -4,4 +4,4 @@ Integrative Generation of Nucleosomes Maps
 
 ## Author ##
 
-[Astrid Desch&ecirc;nes](http://ca.linkedin.com/in/astriddeschenes "Astrid Desch&ecirc;nes") 
+[Astrid Deschênes](http://ca.linkedin.com/in/astriddeschenes "Astrid Deschênes")
