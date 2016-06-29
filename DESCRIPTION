@@ -1,10 +1,20 @@
 Package: shinyNucleoSim
-Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Version: 0.99.0
 Date: 2016-06-28
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Type: Package
+Title: Interactive Generator of Nucleosomes Maps
+Description: This package provides an interface for the Bioconductor nucleoSim 
+  package. The interface is designed to allow the creation of nucleosomes maps
+  using parameters values specified by users. 
+Author: Astrid Deschenes [cre, aut]
+Depends:
+  R (>= 2.10),
+  nucleoSim,
+  shiny
+Suggests:
+  knitr
+License: Artistic-2.0
+VignetteBuilder: knitr
+NeedsCompilation: no
+Maintainer: Astrid Louise Deschenes <Astrid-Louise.Deschenes@crchudequebec.ulaval.ca>
 RoxygenNote: 5.0.1
