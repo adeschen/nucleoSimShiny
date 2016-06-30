@@ -12,7 +12,9 @@ Depends:
   nucleoSim,
   shiny
 Suggests:
-  knitr
+  BiocStyle,
+  knitr,
+  rmarkdown
 License: Artistic-2.0
 VignetteBuilder: knitr
 NeedsCompilation: no

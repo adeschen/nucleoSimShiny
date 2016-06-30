@@ -15,7 +15,8 @@
 #'
 #' @seealso
 #' \itemize{
-#' \item \code{\link{startShinyNucleoSim}} { TODO}
+#' \item \code{\link{startShinyNucleoSim}} { for launching an interactive 
+#' session}
 #' }
 #' 
 #' @keywords package

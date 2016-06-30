@@ -1,0 +1,43 @@
+---
+title: "Generate synthetic nucleosome maps"
+output:
+  BiocStyle::html_document:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{Generate synthetic nucleosome maps}
+  %\VignettePackage{shinyNucleoSim}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r style, echo = FALSE, results = 'asis', message = FALSE}
+BiocStyle::markdown()
+library(knitr)
+```
+
+<br>
+**Package**: `r Rpackage("shinyNucleoSim")`<br />
+**Authors**: `r packageDescription("shinyNucleoSim")[["Author"]]`<br />
+**Version**: `r packageDescription("shinyNucleoSim")$Version`<br />
+**Compiled date**: `r Sys.Date()`<br />
+**License**: `r packageDescription("shinyNucleoSim")[["License"]]`<br />
+  
+# Licensing and citing
+  
+This package and the underlying `r Rpackage("shinyNucleoSim")` code are 
+distributed under the Artistic license 2.0. You are free to use and 
+redistribute this software.
+
+If you use this package for a publication, we would ask you to cite the 
+following:
+
+
+
+# Acknowledgements
+
+The `r Rpackage("shinyNucleoSim")` application is based on the package 
+`r Rpackage("shinyNucleoSim")`, available at Bioconductor at this 
+address [http://bioconductor.org/packages/nucleoSim/](http://bioconductor.org/packages/nucleoSim/).
+
+  
+  

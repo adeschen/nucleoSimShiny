@@ -16,7 +16,8 @@ Astrid Deschenes <astrid-louise.deschenes@crchudequebec.ulaval.ca>
 }
 \seealso{
 \itemize{
-\item \code{\link{startShinyNucleoSim}} { TODO}
+\item \code{\link{startShinyNucleoSim}} { for launching an interactive 
+session}
 }
 }
 \keyword{package}
