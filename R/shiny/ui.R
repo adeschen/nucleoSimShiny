@@ -1,34 +1,65 @@
 library(shiny)
+library(shinythemes)
+
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
-  
+  theme = shinytheme("journal"),
+                 
   # Application title
-  titlePanel("Interactive Generator of Synthetic Nucleosome Maps"),
+  titlePanel(h1("Interactive Generator of Synthetic Nucleosome Maps")),
   
   # Sidebar with a slider input for the number of bins
-  sidebarLayout(
-    sidebarPanel(
+  fluidRow(
+      column(4,
+      h2("Well-positioned nucleosomes"),
+      
       sliderInput("wellNucl",
-                  "Number of well-positioned nucleosomes:",
+                  "Number of nucleosomes:",
                   min = 1,
                   max = 50,
                   value = 30),
       sliderInput("wellNuclVar",
-                  "variance associated with the starting positions of the sequences associated to the well-positioned nucleosomes:",
+                  "Variance associated with the starting positions of the sequences:",
                   min = 0,
                   max = 50,
                   value = 10),
-      sliderInput("maxCoverage",
-                  "Maximum coverage:",
-                  min = 10,
-                  max = 300,
-                  value = 100)
-    ),
+      sliderInput("delWellNucl",
+                  "Number of missing nucleosomes:",
+                  min = 1,
+                  max = 20,
+                  value = 1)
+      ),
+      column(4,
+      h2("Fuzzy nucleosomes"),
+      
+      sliderInput("fuzNucl",
+                  "Number of nucleosomes:",
+                  min = 1,
+                  max = 50,
+                  value = 30),
+      sliderInput("fuzNuclVar",
+                  "Variance associated with the starting positions of the sequences:",
+                  min = 0,
+                  max = 50,
+                  value = 10)
+      ),
+      column(4,
+             h2("Global"),
+             
+             sliderInput("maxCoverage",
+                         "Maximum coverage:",
+                         min = 10,
+                         max = 300,
+                         value = 100),
+             numericInput("offset", label = "Offset:", value = 1000, 
+                          min = 0, step=100)
+      ),
+    hr(),
     
     # Show a plot of the generated distribution
-    mainPanel(
-      plotOutput("distPlot")
-    )
+    
+    plotOutput("distPlot")
+    
   )
 ))

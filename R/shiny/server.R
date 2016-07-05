@@ -16,8 +16,9 @@ shinyServer(function(input, output) {
     bins <- seq(min(x), max(x), length.out = input$wellNucl + 1)
     
     nucleosomeSample <- syntheticNucReadsFromDist(wp.num=input$wellNucl, 
-          wp.del=0, wp.var=input$wellNuclVar, fuz.num=0, fuz.var=1, 
-          max.cover=input$maxCoverage, offset=1000)
+          wp.del=input$delWellNucl, wp.var=input$wellNuclVar, fuz.num=input$fuzNucl, 
+          fuz.var=input$fuzNuclVar, 
+          max.cover=input$maxCoverage, offset=input$offset)
     
     
     # draw the histogram with the specified number of bins
