@@ -10,7 +10,8 @@ Author: Astrid Deschenes [cre, aut]
 Depends:
   R (>= 2.10),
   nucleoSim,
-  shiny
+  shiny,
+  shinythemes
 Suggests:
   BiocStyle,
   knitr,

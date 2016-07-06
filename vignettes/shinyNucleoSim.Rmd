@@ -31,12 +31,21 @@ redistribute this software.
 If you use this package for a publication, we would ask you to cite the 
 following:
 
+# Introduction
+
+The first human genome was released in 2003 at a cost of 2.7 billion dollars.
+The development of next-generation sequencing (NGS) technologies have
+dramatically decreased the cost of genomics studies. NGS can be applied to a
+wide range of studies, such as genomic, metagenomic and epigenetic and is now
+commondly used. 
+
+The initial goal fo data simulators was to generate data for software testing.
 
 
 # Acknowledgements
 
 The `r Rpackage("shinyNucleoSim")` application is based on the package 
-`r Rpackage("shinyNucleoSim")`, available at Bioconductor at this 
+`r Biocpkg("shinyNucleoSim")`, available at Bioconductor at this 
 address [http://bioconductor.org/packages/nucleoSim/](http://bioconductor.org/packages/nucleoSim/).
 
   
