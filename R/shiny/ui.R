@@ -24,12 +24,12 @@ shinyUI(fluidPage(
                   "Variance associated with the starting positions of the sequences:",
                   min = 0,
                   max = 50,
-                  value = 10),
-      sliderInput("delWellNucl",
-                  "Number of missing nucleosomes:",
-                  min = 1,
-                  max = 20,
-                  value = 1)
+                  value = 10)
+#       sliderInput("delWellNucl",
+#                   "Number of missing nucleosomes:",
+#                   min = 1,
+#                   max = 20,
+#                   value = 1)
       ),
       column(4,
       h2("Fuzzy nucleosomes"),
@@ -46,7 +46,7 @@ shinyUI(fluidPage(
                   value = 10)
       ),
       column(4,
-             h2("Global"),
+             h2("Global parameters"),
              
              sliderInput("maxCoverage",
                          "Maximum coverage:",
@@ -64,15 +64,12 @@ shinyUI(fluidPage(
     )),
     tabPanel("About",
             fluidRow(
+               column(4,
+                      img(src='logo_bioconductor.gif')
+               ),
                column(6,
                       includeMarkdown("about.md")
-               ),
-               column(3,
-                      tags$small(
-                        "TODO",
-                        "TODO")
-                      )
                )
             )
     )
-))
+)))
