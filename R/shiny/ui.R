@@ -9,6 +9,11 @@ shinyUI(fluidPage(
     tabPanel("Simulation",
   # Application title
   titlePanel(h1("Interactive Generator of Synthetic Nucleosome Maps")),
+  titlePanel(h4("Nucleosomes play a critical role in regulating the process 
+                of gene transcription. Several software have been developed 
+                to detected the position of the nucleosomes on the genome. 
+                Simulated nucleosome dataset are often used to
+                test the sensitivity and the accurancy of those software.")),
   
   # Sidebar with a slider input for the number of bins
   fluidRow(
