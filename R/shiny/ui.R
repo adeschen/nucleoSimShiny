@@ -1,6 +1,6 @@
 library(shiny)
 library(shinythemes)
-
+library(DT)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
@@ -11,7 +11,7 @@ shinyUI(fluidPage(
   titlePanel(h1("Interactive Generator of Synthetic Nucleosome Sample")),
   titlePanel(h4("Nucleosomes play a critical role in regulating the process 
                 of gene transcription. Several software have been developed 
-                to detected the position of the nucleosomes on the genome using
+                to detect the position of the nucleosomes on the genome using
                 paired-end reads. 
                 Simulated nucleosome samples are useful tools to
                 test the sensitivity and the accurancy of those software.")),
@@ -63,14 +63,21 @@ shinyUI(fluidPage(
                           min = 0, step=100)
       ),
     hr(),
-    
-    # Show a plot of the generated distribution
-    
+    # Show a plot of the nucleosome plot
     plotOutput("distPlot")
     )),
-    tabPanel("Download"),
+    tabPanel("Download",
+             br(),
+             downloadButton('downloadData', 'Download'),
+             br(),
+             br(),
+             DT::dataTableOutput('table')
+             #,
+             #tableOutput('table')
+    ),
     tabPanel("About",
             fluidRow(
+               br(),
                column(4,
                       img(src='logo_bioconductor.gif')
                ),
