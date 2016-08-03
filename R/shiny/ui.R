@@ -61,8 +61,8 @@ shinyUI(fluidPage(
       )
     ),
     h2(div("Synthetic Nucleosome Map", style = "color:steelblue")),
-    h4(div("Good nucleosomes are positionned every 147 base pairs  (green dots). The starting
-      position of the first good nucleosome correspond to the selected offset + 147. Fuzzy nucleosomes are 
+    h4(div("Good nucleosomes are positionned every 147 base pairs  (green dots). The
+      position of the first good nucleosome correspond to the selected offset + 147 bases. Fuzzy nucleosomes are 
       randomnly distributed (red dots).", style = "color:gray")),
     # Show a plot of the nucleosome plot
     plotOutput("distPlot")
