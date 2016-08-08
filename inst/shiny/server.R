@@ -7,6 +7,8 @@ shinyServer(function(input, output) {
   
   # Update the nucleosome sample using specified parameters
   nucleosomeSample <- reactive({
+    if (!is.numeric(input$offset) || input$offset < 0)
+        return(NULL)
     syntheticNucReadsFromDist(wp.num=input$wellNucl, 
                               wp.del=0, wp.var=input$wellNuclVar, fuz.num=input$fuzNucl, 
                               fuz.var=input$fuzNuclVar, 
@@ -15,15 +17,17 @@ shinyServer(function(input, output) {
   
   # Create table containing the nucleosome sample reads
   output$table <- DT::renderDataTable({
-    nucleosomeSample()$dataIP
+    if (is.null((nucleosomeSample()))) {
+        return(NULL)
+    } else {
+        nucleosomeSample()$dataIP
+    }
   })
   
   # Create the graph associated to the nucleosome sample
   output$distPlot <- renderPlot({
-    x    <- faithful[, 2]  # Old Faithful Geyser data
-    
-    bins <- seq(min(x), max(x), length.out = input$wellNucl + 1)
-    
+    if (is.null((nucleosomeSample())))
+      return(NULL)
     plot(nucleosomeSample(), xlab="Position", ylab="Coverage (number of reads)")
   })
   
