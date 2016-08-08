@@ -20,6 +20,6 @@
 #' 
 #' @export
 startShinyNucleoSim <- function() {
-  app <- system.file("R/shiny/", package = "shinyNucleoSim")
+  app <- system.file("shiny/", package = "shinyNucleoSim")
   runApp(app)
 }
