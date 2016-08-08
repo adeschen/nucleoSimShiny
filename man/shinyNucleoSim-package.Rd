@@ -6,7 +6,9 @@
 \alias{shinyNucleoSim-package}
 \title{shinyNucleoSim: Interactive Generator of Nucleosomes Maps}
 \description{
-This package TODO
+This package provides a graphical user interface (GUI)  to the nucleoSim 
+package which generates nucleosomes maps.The GUI implementation relies on
+shiny framework.
 }
 \author{
 Astrid Deschenes

@@ -1,7 +1,9 @@
 #' shinyNucleoSim: Interactive Generator of Nucleosomes Maps
 #'
-#' This package TODO
-#'
+#' This package provides a graphical user interface (GUI)  to the nucleoSim 
+#' package which generates nucleosomes maps.The GUI implementation relies on
+#' shiny framework.
+#' 
 #' @docType package
 #'
 #' @name shinyNucleoSim-package
