@@ -8,7 +8,7 @@
 \description{
 This package provides a graphical user interface (GUI)  to the nucleoSim 
 package which generates nucleosomes maps.The GUI implementation relies on
-shiny framework.
+an shiny framework.
 }
 \author{
 Astrid Deschenes

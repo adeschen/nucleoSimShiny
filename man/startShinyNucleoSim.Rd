@@ -7,8 +7,9 @@
 startShinyNucleoSim()
 }
 \description{
-Start shiny session enabling users to generate nucleosomes
-maps through an interface.
+Start an interactive session which enable users to generate 
+nucleosomes maps through an interface. The implementation relies on
+the \code{shiny} framework.
 }
 \examples{
 if (interactive()) {
