@@ -66,13 +66,12 @@ shinyUI(fluidPage(
     plotOutput("distPlot")
     ),
     tabPanel("Download",
+             h2(div("Synthetic Nucleosome Reads Data", style = "color:steelblue")),
              br(),
-             downloadButton('downloadData', 'Download'),
+             downloadButton('downloadData', 'Download Reads Data'),
              br(),
              br(),
              DT::dataTableOutput('table')
-             #,
-             #tableOutput('table')
     ),
     tabPanel("About",
             br(),
