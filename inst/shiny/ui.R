@@ -11,7 +11,16 @@ shinyUI(fluidPage(
              ## Introduction panel
              #############################################
              tabPanel("Introduction",
-                      includeMarkdown("www/nucleosomesDescription.md")
+                      fluidRow(
+                        column(width = 1, " "),
+                        column(width = 6,
+                          h2(div("Introduction", style = "color:steelblue")),
+                          h4(div(includeMarkdown("www/nucleosomesDescription.md"), style = "color:gray"))),
+                        column(width = 4,
+                          img(src='NHGRI-85212_small.jpg', width="70%", align = "center"),
+                          br(), br(),
+                          h6(div(includeMarkdown("www/imageSource.md"), align = "center"))),
+                        column(width = 1, " "))
              ),
              #############################################
              ## Parameters panel
@@ -20,7 +29,6 @@ shinyUI(fluidPage(
                       ####################################
                       # Application description
                       ####################################
-                      h4(div(includeMarkdown("www/nucleosomesDescription.md"), style = "color:gray")),
                       # Parameters section
                       h2(div("Synthetic Nucleosome Parameters", style = "color:steelblue")),
                       h4(div(includeMarkdown("www/nucleosomesParameters.md"), style = "color:gray")),
