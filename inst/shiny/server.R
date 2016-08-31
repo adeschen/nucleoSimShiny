@@ -3,7 +3,13 @@ library(nucleoSim)
 library(DT)
 
 # Define server logic required to draw a histogram
-shinyServer(function(input, output) {
+shinyServer(function(input, output, session) {
+  
+  observeEvent(input$link_to_tabpanel_parameters, {
+    updateNavbarPage(session, "mainPanel", selected = "ParametersPanel")
+  })
+  
+  
   
   # Update the nucleosome sample using specified parameters
   nucleosomeSample <- reactive({

@@ -5,17 +5,19 @@ library(DT)
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
   theme = shinytheme("journal"),
-  navbarPage(div("Interactive Generator of Synthetic Nucleosomes",
+  navbarPage(id = 'mainPanel',
+             div("Interactive Generator of Synthetic Nucleosomes",
                  style= "color:midnightblue"),
              #############################################
              ## Introduction panel
              #############################################
-             tabPanel("Introduction",
+             tabPanel("Introduction", id="IntroductionPanel",
                       fluidRow(
                         column(width = 1, " "),
                         column(width = 6,
                           h2(div("Introduction", style = "color:steelblue")),
-                          h4(div(includeMarkdown("www/nucleosomesDescription.md"), style = "color:gray"))),
+                          h4(div(includeMarkdown("www/nucleosomesDescription.md"), style = "color:gray")),
+                          actionLink("link_to_tabpanel_parameters", "Link to panel Parameters")),
                         column(width = 4,
                           img(src='NHGRI-85212_small.jpg', width="70%", align = "center"),
                           br(), br(),
@@ -25,7 +27,7 @@ shinyUI(fluidPage(
              #############################################
              ## Parameters panel
              #############################################
-             tabPanel("Parameters",
+             tabPanel("Parameters", id = "ParametersPanel",
                       ####################################
                       # Application description
                       ####################################
@@ -77,7 +79,7 @@ shinyUI(fluidPage(
              #############################################
              ## Graph panel
              #############################################
-             tabPanel("Graph",
+             tabPanel("Graph", id = "GraphPanel",
                       h2(div("Synthetic Nucleosome Map", style = "color:steelblue")),
                       h4(div(includeMarkdown("www/nucleosomesGraph.md"), style = "color:gray")),
                       # Show message when there is a problem
@@ -88,7 +90,7 @@ shinyUI(fluidPage(
              #############################################
              ## Download panel
              #############################################
-             tabPanel("Download",
+             tabPanel("Download", id = "DownloadPanel",
                       h2(div("Synthetic Nucleosome Data", style = "color:steelblue")),
                       br(),
                       h4(div(includeMarkdown("www/nucleosomesSampleRDS.md"), style = "color:gray")),
@@ -103,7 +105,7 @@ shinyUI(fluidPage(
              #############################################
              ## About panel
              #############################################
-             tabPanel("About",
+             tabPanel("About", id = "AboutPanel",
                       br(),
                       fluidRow(
                         column(4,
