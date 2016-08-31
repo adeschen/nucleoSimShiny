@@ -80,6 +80,8 @@ shinyUI(fluidPage(
              tabPanel("Graph",
                       h2(div("Synthetic Nucleosome Map", style = "color:steelblue")),
                       h4(div(includeMarkdown("www/nucleosomesGraph.md"), style = "color:gray")),
+                      # Show message when there is a problem
+                      h4(textOutput("messagePlot"), style="color:red;bold"),
                       # Show a plot of the nucleosome plot
                       plotOutput("distPlot")
              ),
@@ -91,9 +93,9 @@ shinyUI(fluidPage(
                       br(),
                       h4(div(includeMarkdown("www/nucleosomesSampleRDS.md"), style = "color:gray")),
                       br(),
-                      h4(textOutput("messageDownload"), style="color:red;bold"),
                       downloadButton('downloadData', 'Download RDS File'),
                       br(),
+                      h4(textOutput("messageDownload"), style="color:red;bold"),
                       br(),
                       DT::dataTableOutput('table')
              ),

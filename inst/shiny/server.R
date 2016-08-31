@@ -33,6 +33,22 @@ shinyServer(function(input, output) {
       }
   })
     
+  output$messagePlot <- renderText({
+    if (is.character((nucleosomeSample()))) {
+      return(paste0(nucleosomeSample(), " Go back to the Parameters panel to change the value."))
+    } else {
+      return("  ")
+    }
+  })
+  
+  output$messageDownload <- renderText({
+    if (is.character((nucleosomeSample()))) {
+      return(paste0(nucleosomeSample(), " Go back to the Parameters panel to change the value."))
+    } else {
+      return("  ")
+    }
+  })
+  
   # Create the graph associated to the nucleosome sample
   output$distPlot <- renderPlot({
     if (is.character((nucleosomeSample())))
@@ -42,7 +58,7 @@ shinyServer(function(input, output) {
   
   # downloadHandler() takes two arguments, both functions.
   # The content function is passed a filename as an argument, and
-  #   it should write out data to that filename.
+  # it should write out data to that filename.
   output$downloadData <- downloadHandler(
     
     # This function returns a string which tells the client
