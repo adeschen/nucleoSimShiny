@@ -11,13 +11,13 @@ shinyUI(fluidPage(
              #############################################
              ## Introduction panel
              #############################################
-             tabPanel("Introduction", id="IntroductionPanel",
+             tabPanel(title = "Introduction", value = "IntroductionPanel",
                       fluidRow(
                         column(width = 1, " "),
                         column(width = 6,
                           h2(div("Introduction", style = "color:steelblue")),
-                          h4(div(includeMarkdown("www/nucleosomesDescription.md"), style = "color:gray")),
-                          actionLink("link_to_tabpanel_parameters", "Link to panel Parameters")),
+                          h4(div(includeMarkdown("www/nucleosomesDescription.md"), style = "color:gray"), br(),
+                          actionLink("link_to_tabpanel_parameters", "Link to Parameters Panel"))),
                         column(width = 4,
                           img(src='NHGRI-85212_small.jpg', width="70%", align = "center"),
                           br(), br(),
@@ -27,7 +27,7 @@ shinyUI(fluidPage(
              #############################################
              ## Parameters panel
              #############################################
-             tabPanel("Parameters", id = "ParametersPanel",
+             tabPanel(title = "Parameters", value = "ParametersPanel", 
                       ####################################
                       # Application description
                       ####################################
@@ -74,23 +74,26 @@ shinyUI(fluidPage(
                       ),
                       h4(textOutput("message"), style="color:red;bold"),
                       br(),
-                      h4(div(includeMarkdown("www/nucleosomesSeeGraph.md"), style = "color:gray"))
+                      h4(div(includeMarkdown("www/nucleosomesSeeGraph.md"), style = "color:gray"), 
+                      br(),
+                      actionLink("link_to_tabpanel_graph", "Link to Graph Panel"))
              ),
              #############################################
              ## Graph panel
              #############################################
-             tabPanel("Graph", id = "GraphPanel",
+             tabPanel(title = "Graph", id = "GraphPanel",
                       h2(div("Synthetic Nucleosome Map", style = "color:steelblue")),
                       h4(div(includeMarkdown("www/nucleosomesGraph.md"), style = "color:gray")),
                       # Show message when there is a problem
                       h4(textOutput("messagePlot"), style="color:red;bold"),
                       # Show a plot of the nucleosome plot
-                      plotOutput("distPlot")
+                      plotOutput("distPlot"),
+                      actionLink("link_to_tabpanel_download", "Link to Download Panel")
              ),
              #############################################
              ## Download panel
              #############################################
-             tabPanel("Download", id = "DownloadPanel",
+             tabPanel(title = "Download", id = "DownloadPanel",
                       h2(div("Synthetic Nucleosome Data", style = "color:steelblue")),
                       br(),
                       h4(div(includeMarkdown("www/nucleosomesSampleRDS.md"), style = "color:gray")),
@@ -105,7 +108,7 @@ shinyUI(fluidPage(
              #############################################
              ## About panel
              #############################################
-             tabPanel("About", id = "AboutPanel",
+             tabPanel(title = "About", id = "AboutPanel",
                       br(),
                       fluidRow(
                         column(4,

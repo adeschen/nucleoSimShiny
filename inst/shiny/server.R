@@ -6,9 +6,19 @@ library(DT)
 shinyServer(function(input, output, session) {
   
   observeEvent(input$link_to_tabpanel_parameters, {
+    print(input)
     updateNavbarPage(session, "mainPanel", selected = "ParametersPanel")
   })
   
+  observeEvent(input$link_to_tabpanel_graph, {
+    print(input)
+    updateNavbarPage(session, "mainPanel", selected = "GraphPanel")
+  })
+  
+  observeEvent(input$link_to_tabpanel_download, {
+    print(input)
+    updateNavbarPage(session, "mainPanel", selected = "DownloadPanel")
+  })
   
   
   # Update the nucleosome sample using specified parameters
