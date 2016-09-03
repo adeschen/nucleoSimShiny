@@ -1,4 +1,4 @@
-#' shinyNucleoSim: Interactive Generator of Nucleosomes Maps
+#' nucleoSimShiny: Interactive Generator of Nucleosomes Maps
 #'
 #' This package provides a graphical user interface (GUI)  to the nucleoSim 
 #' package which generates nucleosomes maps.The GUI implementation relies on
@@ -6,9 +6,9 @@
 #' 
 #' @docType package
 #'
-#' @name shinyNucleoSim-package
+#' @name nucleoSimShiny-package
 #'
-#' @aliases shinyNucleoSim-package shinyNucleoSim
+#' @aliases nucleoSimShiny-package nucleoSimShiny
 #'
 #' @author  Astrid Deschenes
 #' 
@@ -17,7 +17,7 @@
 #'
 #' @seealso
 #' \itemize{
-#' \item \code{\link{startShinyNucleoSim}} { for launching an interactive 
+#' \item \code{\link{startNucleoSimShiny}} { for launching an interactive 
 #' session}
 #' }
 #' 

@@ -6,7 +6,7 @@
 #' 
 #' @examples
 #' if (interactive()) {
-#'     startShinyNucleoSim()
+#'     startNucleoSimShiny()
 #' }
 #' 
 #' @seealso
@@ -19,7 +19,7 @@
 #' @importFrom shiny runApp
 #' 
 #' @export
-startShinyNucleoSim <- function() {
-  app <- system.file("shiny/", package = "shinyNucleoSim")
+startNucleoSimShiny <- function() {
+  app <- system.file("shiny/", package = "nucleoSimShiny")
   runApp(app)
 }
