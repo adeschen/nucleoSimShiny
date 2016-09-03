@@ -76,24 +76,24 @@ shinyUI(fluidPage(
                       br(),
                       h4(div(includeMarkdown("www/nucleosomesSeeGraph.md"), style = "color:gray"), 
                       br(),
-                      actionLink("link_to_tabpanel_graph", "Link to Graph Panel"))
+                      h4(actionLink("link_to_tabpanel_graph", "Link to Graph Panel")))
              ),
              #############################################
              ## Graph panel
              #############################################
-             tabPanel(title = "Graph", id = "GraphPanel",
+             tabPanel(title = "Graph", value = "GraphPanel",
                       h2(div("Synthetic Nucleosome Map", style = "color:steelblue")),
                       h4(div(includeMarkdown("www/nucleosomesGraph.md"), style = "color:gray")),
                       # Show message when there is a problem
                       h4(textOutput("messagePlot"), style="color:red;bold"),
                       # Show a plot of the nucleosome plot
                       plotOutput("distPlot"),
-                      actionLink("link_to_tabpanel_download", "Link to Download Panel")
+                      h4(actionLink("link_to_tabpanel_download", "Link to Download Panel"))
              ),
              #############################################
              ## Download panel
              #############################################
-             tabPanel(title = "Download", id = "DownloadPanel",
+             tabPanel(title = "Download", value = "DownloadPanel",
                       h2(div("Synthetic Nucleosome Data", style = "color:steelblue")),
                       br(),
                       h4(div(includeMarkdown("www/nucleosomesSampleRDS.md"), style = "color:gray")),
@@ -102,7 +102,7 @@ shinyUI(fluidPage(
                       br(),
                       h4(textOutput("messageDownload"), style="color:red;bold"),
                       br(),
-                      DT::dataTableOutput('table')
+                      h4(actionLink("link_to_tabpanel_parameters_2", "Link to Parameters Panel"))
              ),
              
              #############################################

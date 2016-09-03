@@ -10,6 +10,11 @@ shinyServer(function(input, output, session) {
     updateNavbarPage(session, "mainPanel", selected = "ParametersPanel")
   })
   
+  observeEvent(input$link_to_tabpanel_parameters_2, {
+    print(input)
+    updateNavbarPage(session, "mainPanel", selected = "ParametersPanel")
+  })
+  
   observeEvent(input$link_to_tabpanel_graph, {
     print(input)
     updateNavbarPage(session, "mainPanel", selected = "GraphPanel")
