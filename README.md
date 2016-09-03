@@ -1,7 +1,4 @@
-Integrative Generation of Nucleosomes Maps
+Interactive Generation of Nucleosomes Maps
 =====================
 
-
-## Author ##
-
-[Astrid Deschênes](http://ca.linkedin.com/in/astriddeschenes "Astrid Deschênes")
+This package provides a graphical user interface (GUI)  to the nucleoSim package which generates nucleosomes maps.The GUI implementation relies on an shiny framework.
