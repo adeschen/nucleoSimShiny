@@ -11,7 +11,7 @@ the nucleosomes on the genome using paired-end reads. Synthetically generated
 nucleosome maps are useful tools to test the sensitivity and the accurancy of 
 those software.
 
-This application enables the generation of Synthetic nucleosome maps through an
+This application enables the generation ofsynthetic nucleosome maps through an
 interactive interface.
 
 </br>
