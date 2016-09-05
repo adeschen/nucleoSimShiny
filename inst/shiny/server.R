@@ -1,5 +1,6 @@
 library(shiny)
 library(nucleoSim)
+library(markdown)
 library(DT)
 
 # Define server logic required to draw a histogram
