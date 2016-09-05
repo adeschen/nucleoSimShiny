@@ -115,7 +115,7 @@ shinyUI(fluidPage(
                                img(src='logo_bioconductor.gif')
                         ),
                         column(6,
-                               includeMarkdown("about.md")
+                               includeMarkdown("www/about.md")
                         )
                       )
              )
